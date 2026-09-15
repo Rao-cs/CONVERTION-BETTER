@@ -303,7 +303,7 @@ function convertFMToFMA(players) {
   function handleFileRead(event) {
     const fileContents = event.detail;
     // Process the file contents as required
-    players = convertPlayers(createFMPlayerObjects(fileContents));
+    players = convertPlayers(convertFMToFMA(createFMPlayerObjects(fileContents)));
 
     if(players.length > 0) {
       showDataItem = true;
