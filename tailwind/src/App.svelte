@@ -48,7 +48,53 @@
     console.log(players)
     return players;
   }
+function convertFMToFMA(players) {
+  const FM_TO_FMA = {
+    1: 6,
+    2: 7,
+    3: 8,
+    4: 8,
+    5: 9,
+    6: 10,
+    7: 10,
+    8: 11,
+    9: 11,
+    10: 12,
+    11: 12,
+    12: 13,
+    13: 14,
+    14: 14,
+    15: 15,
+    16: 16,
+    17: 17,
+    18: 17,
+    19: 19,
+    20: 20
+  };
 
+  const attributes = [
+    "Cro", "Acc", "Aer", "Agg", "Agi", "Ant", "Bal", "Bra", "Cmd",
+    "Com", "Cmp", "Cnt", "Dec", "Det", "Dri", "Ecc", "Fin", "Fir",
+    "Fla", "Fre", "Han", "Hea", "Jum", "Kic", "Ldr", "Lon", "L Th",
+    "Mar", "Nat", "OtB", "1v1", "Pac", "Pas", "Pen", "Pos", "Pun",
+    "Ref", "TRO", "Sta", "Str", "Tck", "Tea", "Tec", "Thr", "Vis",
+    "Wor", "Cor"
+  ];
+
+  return players.map(player => {
+    const convertedPlayer = { ...player };
+
+    attributes.forEach(attribute => {
+      const value = Number(player[attribute]);
+
+      if (FM_TO_FMA[value] !== undefined) {
+        convertedPlayer[attribute] = FM_TO_FMA[value];
+      }
+    });
+
+    return convertedPlayer;
+  });
+}
   function convertPlayers(FMPlayers) {
     const EAFCPlayers = FMPlayers.map(player => {
       return {
