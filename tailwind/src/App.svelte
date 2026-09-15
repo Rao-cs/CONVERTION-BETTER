@@ -188,15 +188,15 @@
 
         slidingTackle: Math.min(99, Math.round(((player.Tck*0.55) + (player.Cmp*0.15) + (player.Agg*0.1) + (player.Bra*0.1) + (player.Cnt*0.05) + (player.Dec*0.05))*5)),
 
-        GKDiving: Math.min(99, Math.round(((player.Ref*0.35) + (player.1v1*0.05) + (player.Agi*0.1) + (player.Aer*0.4) + (player.Cnt*0.1))*5)),
+        GKDiving: Math.min(99, Math.round(((player.Ref*0.35) + (player["1v1"]*0.05) + (player.Agi*0.1) + (player.Aer*0.4) + (player.Cnt*0.1))*5)),
 
         GKHandling: Math.min(99, Math.round(((player.Han*0.8) + (player.Thr*0.1))*5)),
 
         GKKicking: Math.min(99, Math.round(((player.Kic*0.5) + (player.Pas*0.4) + (player.Vis*0.1))*5.5)),
 
-        GKPositioning: Math.min(99, Math.round(((player.Pos*0.4) + (player.Com*0.1) + (player.Cmd*0.1) + (player.Dec*0.2) + (player.Aer*0.1) + (player.1v1*0.05) + (player.Ant*0.05))*5)),
+        GKPositioning: Math.min(99, Math.round(((player.Pos*0.4) + (player.Com*0.1) + (player.Cmd*0.1) + (player.Dec*0.2) + (player.Aer*0.1) + (player["1v1"]*0.05) + (player.Ant*0.05))*5)),
 
-        GKReflexes: Math.min(99, Math.round(((player.Ref*0.5) + (player.Agi*0.3) + (player.1v1*0.2))*5))
+        GKReflexes: Math.min(99, Math.round(((player.Ref*0.5) + (player.Agi*0.3) + (player["1v1"]*0.2))*5))
       }
     });
 
