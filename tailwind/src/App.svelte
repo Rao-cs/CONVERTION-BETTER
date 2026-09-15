@@ -97,6 +97,13 @@ function convertFMToFMA(players) {
 }
   function convertPlayers(FMPlayers) {
     const EAFCPlayers = FMPlayers.map(player => {
+console.log("FINISHING:", {
+  Fin: player.Fin,
+  Tec: player.Tec,
+  Dec: player.Dec,
+  Cnt: player.Cnt,
+  Fir: player.Fir
+});
       return {
         firstName: (() => {
           const parts = player.Name.split(' ');
@@ -177,7 +184,7 @@ function convertFMToFMA(players) {
         })()*/
 
         crossing: Math.min(99, Math.round(((player.Cro*0.85) + (player.Tec*0.05) + (player.Cor*0.1))*5)),
-        console.log("FINISHING:", player.Fin, player.Tec, player.Dec, player.Cnt, player.Fir);
+        
         finishing: Math.min(99, Math.round(((player.Fin*0.7) + (player.Tec*0.1) + (player.Dec*0.05) + (player.Cnt*0.05) + (player.Fir*0.1))*5)),
 
         headingAccuracy: Math.min(99, Math.round(((player.Hea * 1)) * 5)),
