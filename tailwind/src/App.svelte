@@ -219,7 +219,7 @@ console.log("FINISHING:", {
 
         stamina: Math.min(99, Math.round(((player.Sta*0.7) + (player.Wor*0.3))*5)),
 
-        strength: Math.min(99, Math.round(((player.Str*0.9))*5)),
+        strength: Math.min(99, Math.round(((player.Str*1))*5)),
 
         longShots: Math.min(99, Math.round(((player.Lon*0.8) + (player.Fin*0.2))*5)),
 
@@ -245,7 +245,7 @@ console.log("FINISHING:", {
 
         GKHandling: Math.min(99, Math.round(((player.Han*0.8) + (player.Thr*0.1))*5)),
 
-        GKKicking: Math.min(99, Math.round(((player.Kic*0.5) + (player.Pas*0.4) + (player.Vis*0.1))*5.5)),
+        GKKicking: Math.min(99, Math.round(((player.Kic*0.5) + (player.Pas*0.4) + (player.Vis*0.1))*5)),
 
         GKPositioning: Math.min(99, Math.round(((player.Pos*0.4) + (player.Com*0.1) + (player.Cmd*0.1) + (player.Dec*0.2) + (player.Aer*0.1) + (player["1v1"]*0.05) + (player.Ant*0.05))*5)),
 
